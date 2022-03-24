@@ -10,7 +10,7 @@ export const getQuote = () => dispatch => {
     axios
         .get('https://animechan.vercel.app/api/random')
         .then(res =>
-            dispatch({ type: FETCH_ANIME_QUOTE, payload: res })
+            dispatch({ type: FETCH_ANIME_QUOTE, payload: res.data })
         )
         .catch(err => dispatch({ type: FETCH_ANIME_FAIL, payload: err }))
 }

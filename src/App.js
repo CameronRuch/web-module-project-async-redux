@@ -15,11 +15,14 @@ const App = props => {
   return (
     <div className="App">
       <h1>Random Anime Quote</h1>
-        <p>{props.anime}</p>
-        <p>{props.character}</p>
-        <p>{props.quote}</p>
+      <div className='Anime-Container'>
+    
+        <p className='Anime-Title'>Anime: {props.anime}</p>
+        <p className='Anime-Character'>Character: {props.character}</p>
+        <label name='Anime-Quote'>Quote: </label>
+        <p className='Anime-Quote' name='Anime-Quote'> {props.quote}</p>
       <button onClick={fetchQuote}>Press for Quote!</button>
-
+      </div>
 
     </div>
   );
